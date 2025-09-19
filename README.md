@@ -53,6 +53,11 @@ This portfolio will help developers, including myself, present projects and skil
 
 ---
 
+## Live Demo  
+🔗 Hosted on GitHub Pages: [View Project](https://htttpkaran.github.io/edunet-frontend-project-karan/)  
+
+---
+
 ## Author  
 **Karan Kumar**  
 - BCA Student (2023–2026), JIS College of Engineering  
