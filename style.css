@@ -1,0 +1,219 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #06b6d4;
+  --muted: #94a3b8;
+  --surface: #0b1220;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: linear-gradient(180deg, #071025 0%, var(--bg) 100%);
+  color: #e6eef6;
+  line-height: 1.45;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 14px;
+  font-size: 15px;
+}
+nav a.active {
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+}
+main {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 18px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
+.intro h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.intro p {
+  margin: 0;
+  color: var(--muted);
+}
+.photo {
+  width: 95%;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b1220, #071025);
+  font-size: 18px;
+  color: var(--muted);
+}
+.skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.chip {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 13px;
+  color: var(--muted);
+}
+.section {
+  margin-top: 18px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.project {
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s;
+}
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+.project h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.project p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  color: #021427;
+  border: none;
+}
+footer {
+  margin: 40px 0 80px;
+  color: var(--muted);
+  text-align: center;
+}
+.modal-back {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  z-index: 40;
+}
+.modal {
+  width: 90%;
+  max-width: 780px;
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 12px;
+}
+.modal h2 {
+  margin: 0 0 8px;
+}
+.modal .meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.close {
+  float: right;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 18px;
+}
+form {
+  display: grid;
+  gap: 10px;
+}
+input,
+textarea,
+select {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  border-radius: 8px;
+  color: #e6eef6;
+}
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .photo {
+    height: 220px;
+  }
+}
